@@ -94,7 +94,7 @@ exports.signUp = async (req, res) => {
       });
     }
     //2 password match krlo
-    if (password != confirmPassword) {
+    if (password !== confirmPassword) {
       return res.status(400).json({
         success: false,
         message: "Password and ConfirmPassword value does not match, try again",
